@@ -1,0 +1,32 @@
+[package]
+name = "pi-rocket"
+version = "0.1.0"
+authors = ["Tristan Lostroh <tl8roy@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# State on pi is unknown
+#linux-embedded-hal = "0.3"
+rppal = { version = "0.11.3", features = ["hal","hal-unproven"] }
+rascam = {version = "0.0.2", features = ["debug"] }
+#https://docs.rs/csv/1.0.0/csv/cookbook/index.html
+
+strum = "0.17"
+strum_macros = "0.17"
+
+chrono = "0.4"
+
+# Might be locked to the pi
+ds323x = "0.2"
+
+# Alti sensore here
+#https://github.com/sparkfun/MPL3115A2_Breakout/tree/V_H1.1_L1.2.0/Libraries/Arduino
+mpl3115 = "0.1"
+
+# Test is mma84 or fork
+#https://github.com/NeoBirth/accelerometer.rs
+#https://github.com/sparkfun/SparkFun_MMA8452Q_Arduino_Library/tree/V_1.1.0
+mma8452q = {version = "0.1", features = ["out_f32"]}
+accelerometer = "0.11"
